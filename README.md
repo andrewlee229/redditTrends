@@ -1,4 +1,5 @@
 redditTrends
 ============
 
-Web application graphs trends of keywords on Reddit, similar to Google Trends
+Web application that graphs trends of keywords on Reddit, similar to Google Trends.
+In progress
