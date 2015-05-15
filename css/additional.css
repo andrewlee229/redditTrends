@@ -1,16 +1,13 @@
-.top-buffer {
-	margin-top:20px;
+body {
+    background-color: #F0F0F0;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
 }
 .bottom-buffer {
 	margin-bottom:20px;
 	margin-left: auto;
     margin-right: auto;
 	width: 80%;
-}
-body {
-    background-color: #F0F0F0;
-    font-family: 'Merriweather', serif;
-    font-size: 14px;
 }
 .btn-primary{
 	background-color: #C8C8C8;
@@ -34,13 +31,4 @@ body {
 	text-align: center;
 	font-size: 50px;
 	font-weight: bold;
-}
-.keywords{
-	text-align: center;
-	font-size: 25px;
-	font-weight: bold;
-}
-.centering{
-	margin-left: auto;
-    margin-right: auto;
 }

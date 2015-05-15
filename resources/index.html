@@ -3,61 +3,49 @@
 <head>
     <meta charset="utf-8">
     <title>Reddit Trends</title>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link href="resources/nv.d3.min.css" rel="stylesheet" type="text/css">
+    <link href="css/nv.d3.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/additional.css" rel="stylesheet">
     <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
-    <script src="/resources/d3.v2.min.js"></script>
-    <script src="/resources/nv.d3.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/resources/graphing.js"></script>
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script src="/js/d3.v2.min.js"></script>
+    <script src="/js/nv.d3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/graphing.js"></script>
+
     <body>
-        <div class="container-fluid top-buffer">
+        <div class="container-fluid">
             <div class="row pagetitle">
                 <div class="col-md-12">
                     Reddit Trends
                 </div>
             </div>
-            <div class="row top-buffer">
+            <div class="row">
                 <div class="col-md-2 form-inline">
-                  Keyword: &nbsp;&nbsp; <input type="text" id="keyword" class="form-control">
+                  Keyword: <input type="text" id="keyword" class="form-control">
               </div>
               <div class="col-md-2 form-inline">
-                Subreddit: &nbsp;&nbsp; <input type="text" id="subreddit" class="form-control">
+                Subreddit: <input type="text" id="subreddit" class="form-control">
             </div>
 
             <div class="col-md-2 form-inline">
-             Start date: &nbsp;&nbsp; <input type="text" id="datepicker" class="form-control">
+             Start date: <input type="text" id="datepicker" class="form-control">
          </div>
 
          <div class="col-md-2 form-inline">
-            End date: &nbsp;&nbsp; <input type="text" id="datepicker2" class="form-control">
+            End date: <input type="text" id="datepicker2" class="form-control">
         </div>
         <div class="col-md-1">
             <button  type="button" onclick="addKeyword()"  class="btn btn-primary">Add to graph</button>
         </div>
-        <div class="col-md-3 form-inline">
+        <div class="col-md-2 form-inline">
             <button  type="button" onclick="changeMode()"  class="btn btn-primary">Change mode</button>&nbsp;&nbsp;&nbsp;&nbsp;
             Current mode: <span id='modeText' class="mode">Hits</span>
         </div>
-
-    </div>
-    <div class="row pagetitle">
-        <div class="col-md-3">
-            <button  type="button" onclick="addMusic()"  class="btn btn-primary">Music</button>
-        </div>
-        <div class="col-md-3">
-            <button  type="button" onclick="addProgramming()"  class="btn btn-primary">Programming</button>
-        </div>
-        <div class="col-md-3">
-            <button  type="button" onclick="addMovies()"  class="btn btn-primary">Movies</button>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-1">
             <button  type="button" onclick="clearGraph()"  class="btn btn-primary">Clear Graph</button>
         </div>
     </div>
@@ -66,21 +54,6 @@
 <svg id='chart' style='height:600px'/>
 <div class='bottom-buffer'>
     <table id='description' border='1' ></table>
-</div>
-
-
-<div class="row pagetitle">
-    <div class="col-md-12">
-        The Top 10
-    </div>
-</div>
-<div class="row keywords">
-    <div class="col-md-12">
-        <span id='keywords'></span>
-    </div>
-</div>
-<div class="pagetitle">
-    <button  type="button" onclick="whatsTrending()"  class="btn btn-primary">Generate Top 10</button>
 </div>
 </body>
 </html>
